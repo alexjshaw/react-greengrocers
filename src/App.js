@@ -1,32 +1,19 @@
 import './styles/reset.css'
 import './styles/index.css'
+import { useState } from 'react'
 
-import initialStoreItems from './store-items'
+import { Header } from './Components/Header'
 
-/*
-Here's what a store item should look like
-{
-  id: '001-beetroot',
-  name: 'beetroot',
-  price: 0.35
-}
-
-What should a cart item look like? 🤔
-*/
-
-console.log(initialStoreItems)
+// console.log(initialStoreItems)
 
 export default function App() {
-  // Setup state here...
+  
+  const [cartItems, setCartItems] = useState([])
+  const [totalPrice, setTotalPrice] = useState(0)
 
   return (
     <>
-      <header id="store">
-        <h1>Greengrocers</h1>
-        <ul className="item-list store--item-list">
-          {/* Wrtite some code here... */}
-        </ul>
-      </header>
+      <Header cartItems={cartItems} setCartItems={setCartItems} />
       <main id="cart">
         <h2>Your Cart</h2>
         <div className="cart--item-list-container">
