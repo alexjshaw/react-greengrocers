@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <>
-      <Header cartItems={cartItems} setCartItems={setCartItems} />
+      <Header cartItems={cartItems} setCartItems={setCartItems}/>
       <main id="cart">
         <h2>Your Cart</h2>
         <div className="cart--item-list-container">

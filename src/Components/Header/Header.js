@@ -4,10 +4,10 @@ import { StoreList } from "./StoreList";
 
 
 
-function Header (cartItems, setCartItems) {
+function Header ({cartItems, setCartItems}) {
+    console.log(`cartItems:`, cartItems)
 
     const [storeItems, setStoreItems] = useState(initialStoreItems)
-
     return (
         <header id="store">
             <h1>Greengrocers</h1>
